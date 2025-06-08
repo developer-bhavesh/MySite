@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   FaGithub, FaLinkedin, FaReact, FaNodeJs, FaGitAlt,
@@ -42,17 +42,11 @@ const stagger = {
 };
 
 const AboutSection = () => {
-  
-
-  
   return (
     <section
       id="about"
       className="py-20 px-6 bg-gray-950 text-white relative overflow-hidden"
     >
-
-      
-
       <motion.h2
         initial="hidden"
         whileInView="visible"
@@ -77,13 +71,16 @@ const AboutSection = () => {
         >
           <img
             src={profileVector}
-            alt="Profile"
+            alt="Bhavesh Solanki profile image"
             className="relative w-64 h-64 object-contain rounded-lg"
             draggable={false}
           />
         </motion.div>
 
-        <motion.div variants={fadeIn(0.4)} className="text-gray-300 space-y-6 text-lg select-text">
+        <motion.div
+          variants={fadeIn(0.4)}
+          className="text-gray-300 space-y-6 text-lg select-text"
+        >
           <p>
             Hi! I’m <span className="text-blue-400 font-semibold">Bhavesh Solanki</span>, a React Native & full-stack developer from Gujarat, India. I’ve built fast, scalable mobile and web apps for over 2 years.
           </p>
@@ -131,19 +128,17 @@ const AboutSection = () => {
           Tech Stack
         </motion.h3>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
           {techStack.map(({ name, icon }, i) => (
-          <motion.div
-  key={i}
-  variants={fadeIn(i * 0.1)}
-  className="bg-gray-700 text-gray-300 px-4 py-3 rounded-xl hover:bg-blue-600 hover:text-white transition-colors duration-300 
-             flex justify-center items-center gap-3 cursor-default select-none 
-             min-h-[72px]" 
-  {icon}
-  <span className="text-center">{name}</span>
-</motion.div>
-
-
+            <motion.div
+              key={i}
+              variants={fadeIn(i * 0.1)}
+              className="bg-gray-700 text-gray-300 rounded-xl hover:bg-blue-600 hover:text-white transition-colors duration-300 
+                         flex flex-col items-center justify-center gap-2 p-4 cursor-default select-none min-h-[100px]"
+            >
+              <div className="text-3xl md:text-4xl">{icon}</div>
+              <span className="text-sm md:text-base font-medium text-center">{name}</span>
+            </motion.div>
           ))}
         </div>
       </motion.div>
