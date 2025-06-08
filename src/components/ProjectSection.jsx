@@ -39,7 +39,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-gray-950 text-white py-20 px-6 sm:px-12 mt-10"
+      className="min-h-screen bg-gray-950 text-white py-20 px-6 sm:px-12"
     >
       <motion.h2
         className="text-4xl font-extrabold text-center mb-12"
