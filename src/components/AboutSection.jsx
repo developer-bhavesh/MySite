@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaGithub, FaLinkedin, FaReact, FaNodeJs, FaGitAlt,
+  FaGithub, FaLinkedin, FaReact, FaNodeJs, FaGitAlt,FaRust 
 } from "react-icons/fa";
 import {
   SiJavascript, SiFirebase, SiExpress,
@@ -19,6 +19,7 @@ const techStack = [
   { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-teal-300" /> },
   { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
+  {name: "Rust", icon: <FaRust className="text-orange-800"/>}
 ];
 
 const fadeIn = (delay = 0) => ({
