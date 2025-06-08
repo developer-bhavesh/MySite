@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import profilePhoto from '../assets/myimage.png';
+import { NavLink } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -31,12 +32,12 @@ const HeroSection = () => {
             >
               📄 Download Resume
             </a>
-            <a
-              href="/project"
+            <NavLink
+              to="/project"
               className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 py-3 font-semibold rounded-2xl transition-all duration-300"
             >
               🚀 View Projects
-            </a>
+            </NavLink>
           </div>
         </motion.div>
 
