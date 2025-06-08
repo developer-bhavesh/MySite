@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { FiHome, FiUser, FiFolder, FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
-import profile from "../assets/myimage.png";
+import profile from "../assets/profile.png";
 
 const tabs = [
   { to: "/", label: "Home", icon: FiHome },
@@ -15,7 +15,7 @@ export const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navbar */}
+      
       <motion.header
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1, transition: { duration: 0.4 } }}
@@ -25,7 +25,7 @@ export const Navbar = () => {
           <img
             src={profile}
             alt="Profile"
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-10 h-10 rounded-full object-cover object-center"
             draggable={false}
           />
           <h1 className="font-bold text-2xl tracking-tight select-none">
