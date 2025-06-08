@@ -134,13 +134,14 @@ const AboutSection = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
           {techStack.map(({ name, icon }, i) => (
             <motion.div
-              key={i}
-              variants={fadeIn(i * 0.1)}
-              className="bg-gray-700 text-gray-300 py-3 px-4 rounded-xl hover:bg-blue-600 hover:text-white transition-colors duration-300 flex justify-center items-center gap-3 cursor-default select-none"
-            >
-              {icon}
-              <span>{name}</span>
-            </motion.div>
+  key={i}
+  variants={fadeIn(i * 0.1)}
+  className="bg-gray-700 text-gray-300 px-4 py-3 rounded-xl hover:bg-blue-600 hover:text-white transition-colors duration-300 flex justify-center items-center gap-3 cursor-default select-none min-h-[64px]"
+>
+  {icon}
+  <span className="whitespace-nowrap">{name}</span>
+</motion.div>
+
           ))}
         </div>
       </motion.div>
